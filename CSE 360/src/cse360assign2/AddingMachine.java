@@ -7,7 +7,8 @@
 package cse360assign2;
 
 /**
- * @description this class will allow the user create an instance and pass in an integer and a user can then perform calculations with that number
+ * @description this class will allow the user create an instance and pass in an integer and 
+ * a user can then perform calculations with that number
  */
 public class AddingMachine {
 	
@@ -22,7 +23,7 @@ public class AddingMachine {
 	private String history;
 	
 	/**
-	 * @description Method sets the private instance variable equal to zero
+	 * @description Method sets the private instance variables equal to zero
 	 * @param no parameters
 	 * @return no return value
 	 */

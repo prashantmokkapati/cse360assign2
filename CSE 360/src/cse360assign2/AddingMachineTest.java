@@ -10,7 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+//A series of methods will test whether the methods of AddingMachine are properly being implemented
 class AddingMachineTest {
+	
+	//Tests if AddingMachine initializes correctly
 	@Test
 	public void initializeTest() {
 		AddingMachine myMachine = new AddingMachine();
@@ -18,6 +21,7 @@ class AddingMachineTest {
 		assertEquals(myMachine.getTotal(), 0);
 	}
 
+	//Tests if addition happens correctly in AddingMachine
 	@Test
 	public void addTest() {
 		AddingMachine myMachine = new AddingMachine();
@@ -26,6 +30,7 @@ class AddingMachineTest {
 		assertEquals(myMachine.getTotal(), 10);
 	}
 	
+	//Tests if subtraction happens correctly in AddingMachine
 	@Test
 	public void subtractTest(){
 		AddingMachine myMachine = new AddingMachine();
@@ -35,6 +40,7 @@ class AddingMachineTest {
 		assertEquals(myMachine.getTotal(), 5);
 	}
 	
+	//Tests if the history of the chances made correctly gets tracked in AddingMachine
 	@Test
 	public void toStringTest(){
 		AddingMachine myMachine = new AddingMachine();
@@ -45,6 +51,7 @@ class AddingMachineTest {
 		assertEquals(myMachine.toString(), "0 + 10 - 5 + 2");
 	}
 	
+	//Tests if AddingMethod correctly clears the operations previously done
 	@Test
 	public void clearTest(){
 		AddingMachine myMachine = new AddingMachine();
