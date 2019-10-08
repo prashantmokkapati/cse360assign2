@@ -17,12 +17,18 @@ public class AddingMachine {
 	private int total;
 	
 	/**
+	 * Private instance variable for the String that will keep track of the calculations
+	 */
+	private String history;
+	
+	/**
 	 * @description Method sets the private instance variable equal to zero
 	 * @param no parameters
 	 * @return no return value
 	 */
 	public AddingMachine() {
-		total = 0;  // not needed - included for clarity
+		total = 0;
+		history = "0";
 	}
 	
 	/**
@@ -31,7 +37,7 @@ public class AddingMachine {
 	 * @return an integer variable that is the total
 	 */
 	public int getTotal() {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -40,7 +46,8 @@ public class AddingMachine {
 	 * @return no return value
 	 */
 	public void add(int value) {
-		
+		total = total + value; 
+		history = history + " + " + Integer.toString(value);
 	}
 	
 	/**
@@ -49,7 +56,8 @@ public class AddingMachine {
 	 * @return no return value
 	 */
 	public void subtract(int value) {
-		
+		total = total - value;
+		history = history + " - " + Integer.toString(value);
 	}
 	
 	/**
@@ -58,7 +66,7 @@ public class AddingMachine {
 	 * @return returns a String of the instance variable
 	 */
 	public String toString() {
-		return "";
+		return history;
 	}
 	
 	/**
@@ -67,6 +75,7 @@ public class AddingMachine {
 	 * @return no return value
 	 */
 	public void clear() {
-		
+		this.total = 0;
+		history = "0";
 	} 	
 }
